@@ -1,5 +1,70 @@
 /* style.css */
 
 body{
+    margin: 0;
+    padding: 0;
     background-image: linear-gradient(to left, lightblue, rgb(113, 130, 242));
 }
+
+#container{
+    display: grid;
+    
+}
+
+/* header */
+.header{
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    padding: 2rem;
+    background-color: rgb(240 248 255 / 30%);
+    width: 100%;
+}
+
+#search{
+    width: 60vh;
+}
+
+.h-right{
+    grid-column-start: 2;
+    grid-column-end: 3 ;
+    justify-self: end;
+    padding-right: 3rem;
+}
+
+/* Body */
+.body{
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: 1fr, 1fr;
+    padding: 3rem;
+    height: 50%;
+    background-color: rgb(240 248 255 / 30%);
+    border-radius: 10px;
+    margin: 4rem;
+    border: 3px solid white;
+    gap: 1rem;
+}
+
+.b-top{
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 60%;
+    justify-self: center;
+}
+
+.b-left{
+
+}
+
+.b-right{
+
+}
+
+.b-top,
+.b-right, 
+.b-left{
+    border: solid 2px white;
+    border-radius: 10px;
+}
+
