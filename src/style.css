@@ -1,1 +1,5 @@
 /* style.css */
+
+body{
+    background-image: linear-gradient(to left, lightblue, rgb(113, 130, 242));
+}
