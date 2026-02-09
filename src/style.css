@@ -4,7 +4,10 @@ body{
     margin: 0;
     padding: 0;
     background-image: linear-gradient(to left, lightblue, rgb(113, 130, 242));
+    
 }
+
+
 
 #container{
     display: grid;
@@ -14,33 +17,36 @@ body{
 /* header */
 .header{
     display: grid;
-    grid-template-columns: 1fr, 1fr;
+    grid-template-columns: 1fr 1fr;
     padding: 2rem;
     background-color: rgb(240 248 255 / 30%);
-    width: 100%;
+}
+
+.h-left{
+    margin-left: 2rem;
 }
 
 #search{
-    width: 60vh;
+    width: 70%;
 }
 
 .h-right{
     grid-column-start: 2;
     grid-column-end: 3 ;
     justify-self: end;
-    padding-right: 3rem;
+    margin-right: 6rem;
 }
 
 /* Body */
 .body{
     display: grid;
-    grid-template-columns: 1fr, 1fr;
-    grid-template-rows: 1fr, 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     padding: 3rem;
-    height: 50%;
+    height: 70%;
     background-color: rgb(240 248 255 / 30%);
     border-radius: 10px;
-    margin: 4rem;
+    margin: 2rem 4rem;
     border: 3px solid white;
     gap: 1rem;
 }
@@ -64,7 +70,9 @@ body{
 .b-top,
 .b-right, 
 .b-left{
+    text-align: center;
     border: solid 2px white;
     border-radius: 10px;
+    padding: 2rem;
 }
 
