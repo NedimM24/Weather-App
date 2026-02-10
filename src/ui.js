@@ -177,4 +177,64 @@ export function displayWeatherData(city, data){
     containerThree.appendChild(forecastThreeEmoji);
     containerThree.appendChild(forecastThreeWeather);
 
+    // container 4
+    let forecastFourDateDiv = document.createElement('div');
+    forecastFourDateDiv.classList.add('forecast-date-div');
+    forecastFourDateDiv.textContent = data.days[4].datetime;
+
+    let forecastFourEmoji = document.createElement('div');
+    forecastFourEmoji.classList.add('forecast-four-emoji');
+    if (data.days[4].conditions.includes('cloudy')) {
+        forecastFourEmoji.textContent = "☁️";
+    } else if (data.days[4].conditions.includes('Rain')) {
+        forecastFourEmoji.textContent = "🌧️";
+    } else if (data.days[4].conditions.includes('Snow')) {
+        forecastFourEmoji.textContent = "❄️";
+    } else {
+        forecastFourEmoji.textContent = "☀️";
+    }
+
+    let forecastFourWeather = document.createElement('div');
+    forecastFourWeather.classList.add('forecast-four-weather');
+    if (currentMeasurement === "F") {
+        forecastFourWeather.textContent = data.days[4].temp + "F";
+    } else {
+        forecastFourWeather.textContent = ((data.days[4].temp - 32) * (5 / 9)).toFixed(2) + "C";
+    }
+
+    // Append elements to containerFour
+    containerFour.appendChild(forecastFourDateDiv);
+    containerFour.appendChild(forecastFourEmoji);
+    containerFour.appendChild(forecastFourWeather);
+
+    // container 5
+    let forecastFiveDateDiv = document.createElement('div');
+    forecastFiveDateDiv.classList.add('forecast-date-div');
+    forecastFiveDateDiv.textContent = data.days[5].datetime;
+
+    let forecastFiveEmoji = document.createElement('div');
+    forecastFiveEmoji.classList.add('forecast-five-emoji');
+    if (data.days[5].conditions.includes('cloudy')) {
+        forecastFiveEmoji.textContent = "☁️";
+    } else if (data.days[5].conditions.includes('Rain')) {
+        forecastFiveEmoji.textContent = "🌧️";
+    } else if (data.days[5].conditions.includes('Snow')) {
+        forecastFiveEmoji.textContent = "❄️";
+    } else {
+        forecastFiveEmoji.textContent = "☀️";
+    }
+
+    let forecastFiveWeather = document.createElement('div');
+    forecastFiveWeather.classList.add('forecast-five-weather');
+    if (currentMeasurement === "F") {
+        forecastFiveWeather.textContent = data.days[5].temp + "F";
+    } else {
+        forecastFiveWeather.textContent = ((data.days[5].temp - 32) * (5 / 9)).toFixed(2) + "C";
+    }
+
+    // Append elements to containerFive
+    containerFive.appendChild(forecastFiveDateDiv);
+    containerFive.appendChild(forecastFiveEmoji);
+    containerFive.appendChild(forecastFiveWeather);
+
 }
