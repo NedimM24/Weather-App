@@ -9,7 +9,10 @@ export async function getWeather(city) {
             return;
         }
 
-        displayWeatherData(city, data);
+       displayWeatherData(city, data);
+
+       console.log(data);
+       
         
     } catch (error) {
         console.log(error);
