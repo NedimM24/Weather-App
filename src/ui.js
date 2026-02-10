@@ -1,5 +1,5 @@
 //data is the city json
-let currentMeaseurement = 'F';
+let currentMeasurement = 'F';
 
 export function displayWeatherData(city, data){
     //Variable for temp measurement. Default will be f
@@ -20,7 +20,13 @@ export function displayWeatherData(city, data){
 
     let wind = data.currentConditions.windspeed;
 
-    
+    //footer display
+    let containerOne = document.querySelector('.forecast-1');
+    let containerTwo = document.querySelector('.forecast-2');
+    let containerThree = document.querySelector('.forecast-3');
+    let containerFour = document.querySelector('.forecast-4');
+    let containerFive = document.querySelector('.forecast-5');
+
     //date
     let dateDiv = document.createElement('div');
     dateDiv.classList.add('date-div');
@@ -36,7 +42,7 @@ export function displayWeatherData(city, data){
     //Current weather
     let currentWeatherDiv = document.createElement('div');
     currentWeatherDiv.classList.add('current-weather-div');
-    if(currentMeaseurement === "F"){
+    if(currentMeasurement === "F"){
         currentWeatherDiv.textContent = currentWeather + "F";
     } else {
         currentWeatherDiv.textContent = currentWeatherC + "C"
@@ -47,16 +53,12 @@ export function displayWeatherData(city, data){
     let weatherEmoji = document.createElement('div');
     weatherEmoji.classList.add('weather-emoji');
     if(data.currentConditions.conditions.includes('cloudy')){
-        weatherEmoji.textContent = "";
         weatherEmoji.textContent = "☁️"
     } else if (data.currentConditions.conditions.includes('Rain')){
-        weatherEmoji.textContent = "";
         weatherEmoji.textContent = "🌧️"
     } else if (data.currentConditions.conditions.includes('Snow')){
-        weatherEmoji.textContent = "";
         weatherEmoji.textContent = "❄️"
     } else{
-        weatherEmoji.textContent = "";
         weatherEmoji.textContent = "☀️"
     }
     weatherContainer.appendChild(weatherEmoji);
@@ -84,11 +86,95 @@ export function displayWeatherData(city, data){
     windDiv.textContent =  wind + ' mph';
     windContainer.appendChild(windDiv);
 
-
-    
-
-
     //display for the 5 day forecast footer
+    //container 1
+    let forecastOneDateDiv = document.createElement('div');
+    forecastOneDateDiv.classList.add('forecast-date-div');
+    forecastOneDateDiv.textContent = data.days[1].datetime;
 
-    
+    let forecastOneEmoji = document.createElement('div');
+    forecastOneEmoji.classList.add('forecast-one-emoji');
+    if(data.days[1].conditions.includes('cloudy')){
+        forecastOneEmoji.textContent = "☁️"
+    } else if (data.days[1].conditions.includes('Rain')){
+        forecastOneEmoji.textContent = "🌧️"
+    } else if (data.days[1].conditions.includes('Snow')){
+        forecastOneEmoji.textContent = "❄️"
+    } else{
+        forecastOneEmoji.textContent = "☀️"
+    };
+ 
+    let forecastOneWeather = document.createElement('div');
+    forecastOneWeather.classList.add('forecast-one-weather');
+    if(currentMeasurement === "F"){
+        forecastOneWeather.textContent = data.days[1].temp + "F";
+    } else {
+        forecastOneWeather.textContent = ((data.days[1].temp - 32) * (5/9)).toFixed(2) + "C"
+    };
+
+
+    containerOne.appendChild(forecastOneDateDiv);
+    containerOne.appendChild(forecastOneEmoji);
+    containerOne.appendChild(forecastOneWeather);
+
+    // container 2
+    let forecastTwoDateDiv = document.createElement('div');
+    forecastTwoDateDiv.classList.add('forecast-date-div');
+    forecastTwoDateDiv.textContent = data.days[2].datetime;
+
+    let forecastTwoEmoji = document.createElement('div');
+    forecastTwoEmoji.classList.add('forecast-two-emoji');
+    if (data.days[2].conditions.includes('cloudy')) {
+        forecastTwoEmoji.textContent = "☁️";
+    } else if (data.days[2].conditions.includes('Rain')) {
+        forecastTwoEmoji.textContent = "🌧️";
+    } else if (data.days[2].conditions.includes('Snow')) {
+        forecastTwoEmoji.textContent = "❄️";
+    } else {
+        forecastTwoEmoji.textContent = "☀️";
+    }
+
+    let forecastTwoWeather = document.createElement('div');
+    forecastTwoWeather.classList.add('forecast-two-weather');
+    if (currentMeasurement === "F") {
+        forecastTwoWeather.textContent = data.days[2].temp + "F";
+    } else {
+        forecastTwoWeather.textContent = ((data.days[2].temp - 32) * (5 / 9)).toFixed(2) + "C";
+    }
+
+    // Append elements to containerTwo
+    containerTwo.appendChild(forecastTwoDateDiv);
+    containerTwo.appendChild(forecastTwoEmoji);
+    containerTwo.appendChild(forecastTwoWeather);
+
+    // container 3
+    let forecastThreeDateDiv = document.createElement('div');
+    forecastThreeDateDiv.classList.add('forecast-date-div');
+    forecastThreeDateDiv.textContent = data.days[3].datetime;
+
+    let forecastThreeEmoji = document.createElement('div');
+    forecastThreeEmoji.classList.add('forecast-three-emoji');
+    if (data.days[3].conditions.includes('cloudy')) {
+        forecastThreeEmoji.textContent = "☁️";
+    } else if (data.days[3].conditions.includes('Rain')) {
+        forecastThreeEmoji.textContent = "🌧️";
+    } else if (data.days[3].conditions.includes('Snow')) {
+        forecastThreeEmoji.textContent = "❄️";
+    } else {
+        forecastThreeEmoji.textContent = "☀️";
+    }
+
+    let forecastThreeWeather = document.createElement('div');
+    forecastThreeWeather.classList.add('forecast-three-weather');
+    if (currentMeasurement === "F") {
+        forecastThreeWeather.textContent = data.days[3].temp + "F";
+    } else {
+        forecastThreeWeather.textContent = ((data.days[3].temp - 32) * (5 / 9)).toFixed(2) + "C";
+    }
+
+    // Append elements to containerThree
+    containerThree.appendChild(forecastThreeDateDiv);
+    containerThree.appendChild(forecastThreeEmoji);
+    containerThree.appendChild(forecastThreeWeather);
+
 }
