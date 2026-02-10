@@ -1,8 +1,9 @@
 //data is the city json
+let currentMeaseurement = 'F';
 
 export function displayWeatherData(city, data){
     //Variable for temp measurement. Default will be f
-    let currentMeaseurement = 'F';
+    
 
     //display for header
     let weatherContainer = document.querySelector('.b-top');
@@ -13,6 +14,7 @@ export function displayWeatherData(city, data){
     let weatherDescription = data.description;
     let date = data.days[0].datetime; //[0] index is todays date
     let currentWeather = data.currentConditions.temp;
+    let currentWeatherC = ((currentWeather - 32) * (5/9)).toFixed(2);
 
     let precipitation = data.currentConditions.precip;
     let wind = data.currentConditions.windspeed;
@@ -46,6 +48,22 @@ export function displayWeatherData(city, data){
         weatherEmoji.textContent = "☀️"
     }
     weatherContainer.appendChild(weatherEmoji);
+
+    //Current weather
+    let currentWeatherDiv = document.createElement('div');
+    currentWeatherDiv.classList.add('current-weather-div');
+    if(currentMeaseurement === "F"){
+        currentWeatherDiv.textContent = currentWeather + "F";
+    } else {
+        currentWeatherDiv.textContent = currentWeatherC + "C"
+    };
+    weatherContainer.appendChild(currentWeatherDiv);
+
+    //weatherDescription
+    let weatherDescriptionDiv = document.createElement('div');
+    weatherDescriptionDiv.classList.add('weather-desc-div');
+    weatherDescriptionDiv.textContent = weatherDescription;
+    weatherContainer.appendChild(weatherDescriptionDiv);
 
 
     
