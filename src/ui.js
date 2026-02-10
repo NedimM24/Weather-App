@@ -16,7 +16,10 @@ export function displayWeatherData(city, data){
     let currentWeatherC = ((currentWeather - 32) * (5/9)).toFixed(2);
 
     let precipitation = data.currentConditions.precip;
+    let precipitationProb = data.currentConditions.precipprob;
+
     let wind = data.currentConditions.windspeed;
+
     
     //date
     let dateDiv = document.createElement('div');
@@ -58,20 +61,31 @@ export function displayWeatherData(city, data){
     }
     weatherContainer.appendChild(weatherEmoji);
 
-    
-
     //weatherDescription
     let weatherDescriptionDiv = document.createElement('div');
     weatherDescriptionDiv.classList.add('weather-desc-div');
     weatherDescriptionDiv.textContent = weatherDescription;
     weatherContainer.appendChild(weatherDescriptionDiv);
 
+    //precipitation and precipitation probability
+    let precipDiv = document.createElement('div');
+    precipDiv.classList.add('precip-div');
+    precipDiv.textContent = `Current precipitaion: `+ precipitation;
+
+    let precipProbDiv =document.createElement('div');
+    precipProbDiv.textContent = `Precipitation probability: ` + precipitationProb;
+
+    precipContainer.appendChild(precipDiv);
+    precipContainer.appendChild(precipProbDiv);
+
+    //wind
+    let windDiv = document.createElement('div');
+    windDiv.classList.add('wind-div');
+    windDiv.textContent =  wind + ' mph';
+    windContainer.appendChild(windDiv);
 
 
-
-
-
-
+    
 
 
     //display for the 5 day forecast footer
