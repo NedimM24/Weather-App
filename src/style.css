@@ -11,6 +11,8 @@ body{
 
 #container{
     display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: .75fr 1.5fr .2fr;
     
 }
 
@@ -20,10 +22,11 @@ body{
     grid-template-columns: 1fr 1fr;
     padding: 2rem;
     background-color: rgb(240 248 255 / 30%);
+    height: 10%;
 }
 
 .h-left{
-    margin-left: 2rem;
+    margin-left: 5rem;
 }
 
 #search{
@@ -46,7 +49,8 @@ body{
     height: 70%;
     background-color: rgb(240 248 255 / 30%);
     border-radius: 10px;
-    margin: 2rem 4rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
     border: 3px solid white;
     gap: 1rem;
 }
@@ -75,4 +79,36 @@ body{
     border-radius: 10px;
     padding: 2rem;
 }
+
+/* footer */
+.footer{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    grid-row-start: 4;
+    grid-row-end: 5;
+
+    padding: 3rem;
+    height: 70%;
+    background-color: rgb(240 248 255 / 30%);
+    border-radius: 10px;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    border: 3px solid white;
+    gap: 1rem;
+}
+
+.forecast-1,
+.forecast-2,
+.forecast-3,
+.forecast-4,
+.forecast-5{
+    text-align: center;
+    border: solid 2px white;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+
+
 
