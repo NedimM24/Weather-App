@@ -3,6 +3,6 @@ import "./style.css";
 import { getWeather } from "./cityWeather.js";
 
 
-getWeather('zavidovici');
+getWeather('Sarajevo');
 
 

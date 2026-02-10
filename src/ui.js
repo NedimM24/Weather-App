@@ -4,7 +4,6 @@ let currentMeaseurement = 'F';
 export function displayWeatherData(city, data){
     //Variable for temp measurement. Default will be f
     
-
     //display for header
     let weatherContainer = document.querySelector('.b-top');
     let precipContainer = document.querySelector('.b-left');
@@ -31,6 +30,16 @@ export function displayWeatherData(city, data){
     cityNameDiv.textContent = cityName;
     weatherContainer.appendChild(cityNameDiv);
 
+    //Current weather
+    let currentWeatherDiv = document.createElement('div');
+    currentWeatherDiv.classList.add('current-weather-div');
+    if(currentMeaseurement === "F"){
+        currentWeatherDiv.textContent = currentWeather + "F";
+    } else {
+        currentWeatherDiv.textContent = currentWeatherC + "C"
+    };
+    weatherContainer.appendChild(currentWeatherDiv);
+
     //Dynamic emoji
     let weatherEmoji = document.createElement('div');
     weatherEmoji.classList.add('weather-emoji');
@@ -49,15 +58,7 @@ export function displayWeatherData(city, data){
     }
     weatherContainer.appendChild(weatherEmoji);
 
-    //Current weather
-    let currentWeatherDiv = document.createElement('div');
-    currentWeatherDiv.classList.add('current-weather-div');
-    if(currentMeaseurement === "F"){
-        currentWeatherDiv.textContent = currentWeather + "F";
-    } else {
-        currentWeatherDiv.textContent = currentWeatherC + "C"
-    };
-    weatherContainer.appendChild(currentWeatherDiv);
+    
 
     //weatherDescription
     let weatherDescriptionDiv = document.createElement('div');
@@ -66,11 +67,11 @@ export function displayWeatherData(city, data){
     weatherContainer.appendChild(weatherDescriptionDiv);
 
 
-    
 
 
-  
-    
+
+
+
 
 
     //display for the 5 day forecast footer
