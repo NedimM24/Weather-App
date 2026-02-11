@@ -8,12 +8,12 @@ let celcius = document.querySelector(".c-btn");
 let isFClicked = true;
 let currentMeasurement = "F";
 
-farenheit.style.backgroundColor = "blue";
+farenheit.style.backgroundColor = "steelblue";
 celcius.style.backgroundColor = "white";
 
 celcius.addEventListener("click", () => {
   if (isFClicked) {
-    celcius.style.backgroundColor = "blue";
+    celcius.style.backgroundColor = "steelblue";
     farenheit.style.backgroundColor = "white";
     isFClicked = false;
     currentMeasurement = "C";
@@ -24,7 +24,7 @@ celcius.addEventListener("click", () => {
 
 farenheit.addEventListener("click", () => {
   if (!isFClicked) {
-    farenheit.style.backgroundColor = "blue";
+    farenheit.style.backgroundColor = "steelblue";
     celcius.style.backgroundColor = "white";
     isFClicked = true;
     currentMeasurement = "F";
@@ -123,6 +123,11 @@ export function displayWeatherData(city, data) {
   weatherContainer.appendChild(weatherDescriptionDiv);
 
   // Precipitation
+  let precipTitle = document.createElement('div');
+  precipTitle.classList.add('precip-title');
+  precipTitle.textContent = 'Precipitation 🌧️';
+  precipContainer.appendChild(precipTitle);
+
   let precipDiv = document.createElement("div");
   precipDiv.classList.add("precip-div");
   precipDiv.textContent = `Current precipitation: ` + precipitation;
@@ -134,6 +139,13 @@ export function displayWeatherData(city, data) {
   precipContainer.appendChild(precipProbDiv);
 
   // Wind
+// Precipitation
+  let windTitle = document.createElement('div');
+  windTitle.classList.add('wind-title');
+  windTitle.textContent = 'Wind 💨';
+  windContainer.appendChild(windTitle);
+
+
   let windDiv = document.createElement("div");
   windDiv.classList.add("wind-div");
   windDiv.textContent = wind + " mph";

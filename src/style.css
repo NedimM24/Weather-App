@@ -95,6 +95,12 @@ body {
   font-size: 100px;
 }
 
+.precip-title,
+.wind-title{
+    font-weight: bolder;
+    font-size: larger;
+}
+
 /* footer */
 .footer {
   display: grid;
