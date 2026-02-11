@@ -46,6 +46,20 @@ body {
   margin-top: 1.5rem;
 }
 
+.f-btn,
+.c-btn{
+    border: solid 1px black;
+    width: 2rem;
+    border-radius: 5px;
+}
+
+.search-btn{
+    border: solid 1px black;
+    border-radius: 5px;
+    width: 5rem;
+    height: 1.5rem;
+}
+
 /* Body */
 .body {
   display: grid;
@@ -69,12 +83,6 @@ body {
   width: 60%;
   justify-self: center;
   gap: 1rem;
-}
-
-.b-left {
-}
-
-.b-right {
 }
 
 .b-top,
