@@ -23,7 +23,9 @@ This project was created to practice working with REST APIs, handling asynchrono
 
 The application fetches real-time weather data from an external API and renders it dynamically on the page.
 
-#API Key Note
+
+
+# API Key Note
 
 The API key is currently hardcoded for development purposes.
 
