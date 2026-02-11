@@ -5,6 +5,8 @@ let celcius = document.querySelector('.c-btn');
 let isFClicked = true;
 let currentMeasurement = 'F';
 
+
+
 farenheit.style.backgroundColor = 'blue';
 celcius.style.backgroundColor = 'white';
 
@@ -14,6 +16,7 @@ celcius.addEventListener('click', () => {
         farenheit.style.backgroundColor = 'white';
         isFClicked = false;
         currentMeasurement = 'C';
+        
     } 
 })
 
@@ -33,6 +36,7 @@ function convertTemperature(temp) {
         return ((temp - 32) * (5 / 9)).toFixed(2) + "C";
     }
 }
+
 
 function getWeatherEmoji(conditions) {
     if (conditions.includes('cloudy')) {
@@ -133,11 +137,17 @@ export function displayWeatherData(city, data) {
     windContainer.appendChild(windDiv);
 
     // Display for the 5-day forecast
-    let forecastContainers = [document.querySelector('.forecast-1'), document.querySelector('.forecast-2'), document.querySelector('.forecast-3'), document.querySelector('.forecast-4'), document.querySelector('.forecast-5')];
+    let forecastContainers = [
+        document.querySelector('.forecast-1'), 
+        document.querySelector('.forecast-2'), 
+        document.querySelector('.forecast-3'), 
+        document.querySelector('.forecast-4'), 
+        document.querySelector('.forecast-5')];
     
     // Loop through forecast days and add containers dynamically
     data.days.slice(1, 6).forEach((forecastData, index) => {
         let forecastContainer = createForecastContainer(forecastData);
         forecastContainers[index].appendChild(forecastContainer);
+
     });
 }
