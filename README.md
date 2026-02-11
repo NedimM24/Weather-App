@@ -1,14 +1,14 @@
 # API Practice: Weather App
 
 <img width="2558" height="1314" alt="image" src="https://github.com/user-attachments/assets/3a2db6e3-acef-48dc-bcb1-b9de5672d8ca" />
-**🌦️ Weather App – API Practice Project**
+# 🌦️ Weather App – API Practice Project
 
 A simple weather application built with JavaScript, Webpack, and the Visual Crossing Weather API.
 This project was created to practice working with REST APIs, handling asynchronous JavaScript, and dynamically updating the DOM with real-time weather data.
 
-**🚀 Live Overview**
+# 🚀 Live Overview
 
-This app allows users to:
+## This app allows users to:
 
  - 🔍 Search for any city
 
@@ -28,14 +28,3 @@ The application fetches real-time weather data from an external API and renders 
 <img width="2553" height="1308" alt="image" src="https://github.com/user-attachments/assets/d70853df-7980-4487-a5fe-b2e22da8d77c" />
 
 
-
-# Big Title
-
-## Smaller Title
-
-**This should be bold**
-
-_This should be italic_
-
-- Bullet 1
-- Bullet 2
