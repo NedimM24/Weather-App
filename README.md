@@ -43,7 +43,7 @@ It provides:
 
  - Precipitation
 
- - Weather descriptions
+ - Weather descriptions.
 
 
 
