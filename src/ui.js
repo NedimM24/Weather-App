@@ -148,6 +148,5 @@ export function displayWeatherData(city, data) {
     data.days.slice(1, 6).forEach((forecastData, index) => {
         let forecastContainer = createForecastContainer(forecastData);
         forecastContainers[index].appendChild(forecastContainer);
-
     });
 }

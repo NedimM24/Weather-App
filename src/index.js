@@ -2,15 +2,57 @@ import "./style.css";
 
 import { getWeather } from "./cityWeather.js";
 
+let currentCity = 'Sarajevo'
 
-getWeather('Sarajevo'); //Placeholder until user searches for new city
+
+getWeather(currentCity); //Placeholder until user searches for new city
 
 let searchBtn = document.querySelector('.search-btn');
 let userCity = document.getElementById('search');
+
 searchBtn.addEventListener('click', () => {
+    currentCity = userCity.value;
     clearContainers();
-    getWeather(userCity.value);
+    getWeather(currentCity);
 }) 
+
+
+//Temp hadler
+let farenheit = document.querySelector('.f-btn');
+let celcius = document.querySelector('.c-btn');
+
+let isFClicked = true;
+let currentMeasurement = 'F';
+
+
+
+farenheit.style.backgroundColor = 'blue';
+celcius.style.backgroundColor = 'white';
+
+celcius.addEventListener('click', () => {
+    if(isFClicked){
+        celcius.style.backgroundColor = "blue";
+        farenheit.style.backgroundColor = 'white';
+        isFClicked = false;
+        currentMeasurement = 'C';
+        clearContainers();
+        getWeather(currentCity);
+        
+    } 
+})
+
+farenheit.addEventListener('click', () => {
+    if(!isFClicked){        
+        farenheit.style.backgroundColor = 'blue';
+        celcius.style.backgroundColor = 'white';
+        isFClicked = true;
+        currentMeasurement = 'F';
+        clearContainers();
+        getWeather(currentCity);
+    }
+})
+
+
 
 
 function clearContainers() {
