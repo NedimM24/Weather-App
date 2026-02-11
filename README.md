@@ -22,6 +22,28 @@ This project was created to practice working with REST APIs, handling asynchrono
  - 📅 View a 5-day forecast
 
 The application fetches real-time weather data from an external API and renders it dynamically on the page.
+
+# 🌍 Main Focus: Working with APIs
+## 🔗 What API Is Used?
+
+This project uses the:
+
+Visual Crossing Weather API
+https://www.visualcrossing.com/weather-api
+
+It provides:
+
+ - Current weather conditions
+
+ - Hourly and daily forecasts
+
+ - Temperature
+
+ - Wind speed
+
+ - Precipitation
+
+Weather descriptions
 <img width="2559" height="1308" alt="image" src="https://github.com/user-attachments/assets/4c00dc15-1a77-4505-ba86-f549d47b02eb" />
 <img width="2558" height="1304" alt="image" src="https://github.com/user-attachments/assets/4fd7f3c0-4487-4767-82f7-12917f06deb0" />
 <img width="2555" height="1308" alt="image" src="https://github.com/user-attachments/assets/db03e03c-781d-411f-b6f5-9d4cdb287203" />
