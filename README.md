@@ -23,6 +23,18 @@ This project was created to practice working with REST APIs, handling asynchrono
 
 The application fetches real-time weather data from an external API and renders it dynamically on the page.
 
+#API Key Note
+
+The API key is currently hardcoded for development purposes.
+
+⚠️ In a production application:
+
+ - API keys should be stored securely
+
+ - Environment variables should be used
+
+ - Sensitive data should never be exposed in frontend code
+
 # 🌍 Main Focus: Working with APIs
 ## 🔗 What API Is Used?
 
