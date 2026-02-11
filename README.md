@@ -89,27 +89,27 @@ export async function fetchCityWeather(city) {
 
 🔎 What’s Happening Here?
 
-A dynamic URL is created using the user’s city input.
+1. A dynamic URL is created using the user’s city input.
 
-The app sends a GET request to the API.
+2. The app sends a GET request to the API.
 
-If the response fails → an error is thrown.
+3. If the response fails → an error is thrown.
 
-The JSON data is parsed.
+4. The JSON data is parsed.
 
-The processed data is returned to the app.
+5. The processed data is returned to the app.
 
 This demonstrates:
 
-✅ Asynchronous JavaScript (async/await)
+ - Asynchronous JavaScript (async/await)
 
-✅ Error handling with try/catch
+ -  Error handling with try/catch
 
-✅ Handling failed HTTP responses
+ -  Handling failed HTTP responses
 
-✅ Parsing JSON responses
+ -  Parsing JSON responses
 
-✅ Dynamic API endpoints
+ -  Dynamic API endpoints
 <img width="2559" height="1308" alt="image" src="https://github.com/user-attachments/assets/4c00dc15-1a77-4505-ba86-f549d47b02eb" />
 <img width="2558" height="1304" alt="image" src="https://github.com/user-attachments/assets/4fd7f3c0-4487-4767-82f7-12917f06deb0" />
 <img width="2555" height="1308" alt="image" src="https://github.com/user-attachments/assets/db03e03c-781d-411f-b6f5-9d4cdb287203" />
