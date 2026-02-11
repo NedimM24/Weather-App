@@ -67,7 +67,7 @@ It provides:
 # 📡 How the API Request Works
 
 The app fetches weather data using the fetch() API:
-
+---
 export async function fetchCityWeather(city) {
   try {
     let userCity = await fetch(
@@ -86,7 +86,7 @@ export async function fetchCityWeather(city) {
     return null;
   }
 }
-
+---
 🔎 What’s Happening Here?
 
 1. A dynamic URL is created using the user’s city input.
