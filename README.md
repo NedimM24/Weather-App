@@ -47,7 +47,7 @@ It provides:
 
 ---
 
-#🛠️ Technologies Used
+# 🛠️ Technologies Used
 
  - JavaScript (ES Modules)
 
