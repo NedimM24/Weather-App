@@ -29,3 +29,13 @@ The application fetches real-time weather data from an external API and renders 
 
 
 
+# Big Title
+
+## Smaller Title
+
+**This should be bold**
+
+_This should be italic_
+
+- Bullet 1
+- Bullet 2
