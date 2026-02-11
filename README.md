@@ -1,4 +1,4 @@
-# Api Practice: Weather App
+# API Practice: Weather App
 
 <img width="2558" height="1314" alt="image" src="https://github.com/user-attachments/assets/3a2db6e3-acef-48dc-bcb1-b9de5672d8ca" />
 <img width="2559" height="1308" alt="image" src="https://github.com/user-attachments/assets/4c00dc15-1a77-4505-ba86-f549d47b02eb" />
