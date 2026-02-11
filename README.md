@@ -124,6 +124,33 @@ This demonstrates:
  -  Parsing JSON responses
 
  -  Dynamic API endpoints
+
+
+# 🔎 Search Function
+
+## The search feature allows users to enter a city and fetch its weather data from the API.
+
+searchBtn.addEventListener("click", () => {
+  currentCity = userCity.value;
+  clearContainers();
+  getWeather(currentCity);
+});
+
+How It Works
+
+ - The user types a city name.
+
+ - When the search button is clicked, the app:
+
+   - Updates the currentCity
+
+   - Clears the old weather data
+
+   - Sends a new API request using getWeather()
+
+ - The new data is then displayed on the page.
+
+This connects user input → API request → updated UI, making the app dynamic and interactive.
 <img width="2559" height="1308" alt="image" src="https://github.com/user-attachments/assets/4c00dc15-1a77-4505-ba86-f549d47b02eb" />
 <img width="2558" height="1304" alt="image" src="https://github.com/user-attachments/assets/4fd7f3c0-4487-4767-82f7-12917f06deb0" />
 <img width="2555" height="1308" alt="image" src="https://github.com/user-attachments/assets/db03e03c-781d-411f-b6f5-9d4cdb287203" />
