@@ -129,13 +129,13 @@ This demonstrates:
 # 🔎 Search Function
 
 ## The search feature allows users to enter a city and fetch its weather data from the API.
-
+---
 searchBtn.addEventListener("click", () => {
   currentCity = userCity.value;
   clearContainers();
   getWeather(currentCity);
 });
-
+---
 How It Works
 
  - The user types a city name.
