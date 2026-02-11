@@ -1,6 +1,7 @@
 # API Practice: Weather App
 
 <img width="2558" height="1314" alt="image" src="https://github.com/user-attachments/assets/3a2db6e3-acef-48dc-bcb1-b9de5672d8ca" />
+
 # 🌦️ Weather App – API Practice Project
 
 A simple weather application built with JavaScript, Webpack, and the Visual Crossing Weather API.
