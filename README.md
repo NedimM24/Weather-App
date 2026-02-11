@@ -43,7 +43,24 @@ It provides:
 
  - Precipitation
 
-Weather descriptions
+ - Weather descriptions
+
+
+#🛠️ Technologies Used
+
+ - JavaScript (ES Modules)
+
+ - Webpack 5
+
+ - Webpack Dev Server
+
+ - CSS
+
+ - Visual Crossing Weather API
+
+ - ESLint
+
+Prettier
 <img width="2559" height="1308" alt="image" src="https://github.com/user-attachments/assets/4c00dc15-1a77-4505-ba86-f549d47b02eb" />
 <img width="2558" height="1304" alt="image" src="https://github.com/user-attachments/assets/4fd7f3c0-4487-4767-82f7-12917f06deb0" />
 <img width="2555" height="1308" alt="image" src="https://github.com/user-attachments/assets/db03e03c-781d-411f-b6f5-9d4cdb287203" />
