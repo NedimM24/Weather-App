@@ -100,6 +100,7 @@ export async function fetchCityWeather(city) {
     return null;
   }
 }
+
 ---
 🔎 What’s Happening Here?
 
