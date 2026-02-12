@@ -21,6 +21,8 @@ This project was created to practice working with REST APIs, handling asynchrono
 
  -  View a 5-day forecast
 
+ - Weather emojis dynamically chnage based on current weather conditions
+
 The application fetches real-time weather data from an external API and renders it dynamically on the page.
 
 
