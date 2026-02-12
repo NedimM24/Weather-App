@@ -7,19 +7,19 @@
 A simple weather application built with JavaScript, Webpack, and the Visual Crossing Weather API.
 This project was created to practice working with REST APIs, handling asynchronous JavaScript, and dynamically updating the DOM with real-time weather data.
 
-# 🚀 Live Overview
+#  Live Overview
 
 ## This app allows users to:
 
- - 🔍 Search for any city
+ -  Search for any city
 
- - 🌡️ Toggle between Fahrenheit and Celsius
+ -  Toggle between Fahrenheit and Celsius
 
- - 🌤️ View current weather conditions
+ -  View current weather conditions
 
- - 🌧️ See precipitation and wind data
+ -  See precipitation and wind data
 
- - 📅 View a 5-day forecast
+ -  View a 5-day forecast
 
 The application fetches real-time weather data from an external API and renders it dynamically on the page.
 
@@ -29,7 +29,7 @@ The application fetches real-time weather data from an external API and renders 
 
 The API key is currently hardcoded for development purposes.
 
-⚠️ In a production application:
+ In a production application:
 
  - API keys should be stored securely
 
@@ -38,7 +38,7 @@ The API key is currently hardcoded for development purposes.
  - Sensitive data should never be exposed in frontend code
 
 # 🌍 Main Focus: Working with APIs
-## 🔗 What API Is Used?
+##  What API Is Used?
 
 This project uses the:
 
